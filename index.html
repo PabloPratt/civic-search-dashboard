@@ -22,13 +22,16 @@
       </section>
 
       <section class="panel controls">
+        <label class="sr-only" for="query">Search records</label>
         <input id="query" type="search" placeholder="Search name, county, organization, or record type" />
+        <label class="sr-only" for="county">Filter by county</label>
         <select id="county">
           <option value="all">All counties</option>
           <option value="Harris">Harris</option>
           <option value="Dallas">Dallas</option>
           <option value="Travis">Travis</option>
         </select>
+        <label class="sr-only" for="risk">Filter by signal type</label>
         <select id="risk">
           <option value="all">All signals</option>
           <option value="Compliance">Compliance</option>

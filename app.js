@@ -63,15 +63,32 @@ function render() {
       && (risk.value === "all" || record.risk === risk.value);
   });
 
-  results.innerHTML = visible.map((record) => `
-    <article class="panel result">
-      <span class="badge">${record.county} · ${record.risk}</span>
-      <h2>${record.title}</h2>
-      <p class="tagline">${record.description}</p>
-      <p class="source">${record.source}</p>
-      <p class="score">${record.score}% confidence</p>
-    </article>
-  `).join("");
+  results.replaceChildren(...visible.map((record) => {
+    const article = document.createElement("article");
+    article.className = "panel result";
+
+    const badge = document.createElement("span");
+    badge.className = "badge";
+    badge.textContent = `${record.county} · ${record.risk}`;
+
+    const title = document.createElement("h2");
+    title.textContent = record.title;
+
+    const description = document.createElement("p");
+    description.className = "tagline";
+    description.textContent = record.description;
+
+    const source = document.createElement("p");
+    source.className = "source";
+    source.textContent = record.source;
+
+    const score = document.createElement("p");
+    score.className = "score";
+    score.textContent = `${record.score}% confidence`;
+
+    article.append(badge, title, description, source, score);
+    return article;
+  }));
 }
 
 [query, county, risk].forEach((control) => control.addEventListener("input", render));
