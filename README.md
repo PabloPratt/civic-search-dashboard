@@ -6,9 +6,13 @@ Prototype search interface for exploring public-record entities, case metadata, 
 
 Public datasets are often fragmented across county portals, spreadsheets, and search systems. This project sketches a cleaner analyst workflow: enter a person, organization, county, or topic, then review confidence-scored matches with source and freshness context.
 
+## Current status
+
+Static browser prototype with hardcoded sample data; no backend, auth, or live integrations yet.
+
 ## Features
 
-- Weighted search across names, aliases, counties, and record types
+- Search/filter flow across names, counties, and record types using sample data
 - Result cards with confidence, source, and update status
 - Lightweight filtering for county, category, and risk signal
 - Static demo that can run without a backend
