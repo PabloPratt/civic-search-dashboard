@@ -2,6 +2,10 @@
 
 Prototype search interface for exploring public-record entities, case metadata, and regional civic datasets.
 
+## Live demo
+
+https://pablopratt.github.io/civic-search-dashboard/
+
 ## Why it exists
 
 Public datasets are often fragmented across county portals, spreadsheets, and search systems. This project sketches a cleaner analyst workflow: enter a person, organization, county, or topic, then review confidence-scored matches with source and freshness context.
