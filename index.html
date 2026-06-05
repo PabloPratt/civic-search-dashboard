@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Civic Search Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Civic data prototype</p>
+          <h1>Search public-record signals with context.</h1>
+          <p class="lede">A focused analyst interface for fragmented county and civic datasets.</p>
+        </div>
+        <div class="panel metrics">
+          <span><strong>87</strong> indexed feeds</span>
+          <span><strong>14</strong> counties modeled</span>
+          <span><strong>92%</strong> sample match confidence</span>
+        </div>
+      </section>
+
+      <section class="panel controls">
+        <input id="query" type="search" placeholder="Search name, county, organization, or record type" />
+        <select id="county">
+          <option value="all">All counties</option>
+          <option value="Harris">Harris</option>
+          <option value="Dallas">Dallas</option>
+          <option value="Travis">Travis</option>
+        </select>
+        <select id="risk">
+          <option value="all">All signals</option>
+          <option value="Compliance">Compliance</option>
+          <option value="Civil">Civil</option>
+          <option value="Property">Property</option>
+        </select>
+      </section>
+
+      <section id="results" class="results" aria-live="polite"></section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
